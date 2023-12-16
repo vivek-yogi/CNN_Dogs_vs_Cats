@@ -1,1 +1,1 @@
-from CNN_Classifier.config.configuration import (ConfigurationManager)
+from CNN_Classifier.config.configuration import (ConfigurationManager,ConfigurationManager2)

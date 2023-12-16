@@ -1,4 +1,4 @@
-from CNN_Classifier.config import ConfigurationManager
+from CNN_Classifier.config import ConfigurationManager,ConfigurationManager2
 from CNN_Classifier.components.data_ingestion import DataIngestion
 from CNN_Classifier import logger
 
