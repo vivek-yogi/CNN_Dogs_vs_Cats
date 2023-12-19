@@ -3,7 +3,7 @@ from CNN_Classifier.utils import create_directories,read_yaml
 from pathlib import Path
 import os
 from CNN_Classifier.entity import (DataIngestionConfig,PrepareBaseModelConfig,PrepareCallbacksConfig,
-                                   TrainingConfig)
+                                   TrainingConfig,EvaluationConfig)
 
 
 class ConfigurationManager:
@@ -77,6 +77,16 @@ class ConfigurationManager:
                 )
 
               return prepare_base_model_config
+        
+
+        def get_validation_config(self) -> EvaluationConfig:
+              eval_config = EvaluationConfig(
+                    path_of_model    =self.config.training.trained_model_path,
+                    training_data    =self.config.data_ingestion.unzip_dir,
+                    params_image_size=self.params.IMAGE_SIZE,
+                    params_batch_size=self.params.BATCH_SIZE
+                )
+              return eval_config
         
 
 class ConfigurationManager2:
