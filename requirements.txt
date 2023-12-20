@@ -11,4 +11,6 @@ tqdm
 joblib
 python-box == 6.0.2
 scipy
+Flask
+Flask-Cors
 -e .
